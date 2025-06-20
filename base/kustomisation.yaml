@@ -1,1 +1,11 @@
-apiVersion: kustomize.
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- namespace.yaml
+- service.yaml
+- serviceAccount.yaml
+- role.yaml
+- roleBinding.yaml
+#- networkPolicy.yaml
+- deployment.yaml
