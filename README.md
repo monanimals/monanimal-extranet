@@ -4,3 +4,4 @@ Le repository est organisé de la manière suivante
 tag des versions
   . les tags suivent les versions de l'application monanimal (2 premiers digits)
 Au démarrage du build d'une version, une branche de conf associée à la version précédente est créee, develop devenant la conf de la version en cours
+Verification de la regle push sur main
