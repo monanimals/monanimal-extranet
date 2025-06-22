@@ -3,3 +3,18 @@ kind: Role
 metadata:
   name: role-monanimal-extranet
 rules:
+- apiGroups: [""] 
+  resources: ["configmaps","persistentvolumeclaims","pods"]
+  verbs: ["get","list","watch"]
+- apiGroups: [""]
+  resources: ["namespace/status","pods/logs","pods/status","replicationcontrollers/status","resourcequotas/status"]
+  verbs: ["get","list","watch"]
+- apiGroups: [""] 
+  resources: ["namespace"]
+  verbs: ["get","list","watch"]
+- apiGroups: ["apps"]
+  resources: ["deployments","deployments/scale","replicasets","replicasets/scale","statefulsets","statefulsets/scale"]
+  verbs: ["get","list","watch"]
+- apiGroups: ["extensions"]
+  resources: ["deployments","deployments/scale","replicasets","replicasets/scale"]
+  verbs: ["get","list","watch"]

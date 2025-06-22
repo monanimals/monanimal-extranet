@@ -1,6 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  labels:
+    namespace: monanimal-extranet-dev
   name: monanimal-extranet
 spec:
   replicas: 3

@@ -1,0 +1,18 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/monanimals/monanimal-extranet.git'
+            }
+        }
+
+        stage('Deploy to Kubernetes') {
+            steps {
+                // Exemple de commande kubectl, à adapter selon ta config
+                sh 'kubectl apply -k dev/'
+            }
+        }
+    }
+}
