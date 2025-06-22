@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/monanimals/monanimal-extranet.git'
+                git branch: 'develop', url: 'https://github.com/monanimals/monanimal-extranet.git'
             }
         }
 
