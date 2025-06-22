@@ -11,7 +11,7 @@ pipeline {
         stage('Deploy to Kubernetes') {
             steps {
                 // Exemple de commande kubectl, à adapter selon ta config
-                sh 'kubectl apply -k dev/'
+                bat 'kubectl apply -k dev/'
             }
         }
     }
