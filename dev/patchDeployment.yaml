@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: monanimal-extranet
-        image: nginx:komlan
+        image: nginx:latest
         resources:
           limits:
             memory: "128Mi"
