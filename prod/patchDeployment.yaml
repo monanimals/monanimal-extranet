@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    namespace: monanimal-extranet-dev
+  name: monanimal-extranet
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: monanimal-extranet
+  template:
+    metadata:
+      labels:
+        app: monanimal-extranet
+    spec:
+      containers:
+      - name: monanimal-extranet
+        image: nginx:latest
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
+
