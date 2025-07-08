@@ -1,6 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  labels:
+    namespace: monanimal-extranet-dev
   name: monanimal-extranet
 spec:
   replicas: 3
@@ -14,7 +16,7 @@ spec:
     spec:
       containers:
       - name: monanimal-extranet
-        image: nginx:stable
+        image: nginx:latest
         resources:
           limits:
             memory: "128Mi"

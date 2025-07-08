@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+
+    environment {
+      KUBECONFIG = '/home/osboxes/.kube/config'
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'develop', url: 'https://github.com/monanimals/monanimal-extranet.git'
+            }
+        }
+
+        stage('Deploy to Kubernetes') {
+            steps {
+                // Exemple de commande kubectl, à adapter selon ta config
+                sh 'kubectl apply -k dev/'
+            }
+        }
+    }
+}
